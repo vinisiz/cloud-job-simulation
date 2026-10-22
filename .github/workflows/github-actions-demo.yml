@@ -1,0 +1,17 @@
+
+name: GitHub Actions Demo
+
+run-name: Testing GitHub Actions
+
+on: [push]
+
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "The workflow was triggered successfully!"
+      - name: Check out repository code
+        uses: actions/checkout@v6
+      - name: List repository files
+        run: ls
+      - run: echo "GitHub Actions workflow completed."
